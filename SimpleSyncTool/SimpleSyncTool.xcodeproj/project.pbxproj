@@ -1,0 +1,486 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		38DD8FCD167D289A00F59669 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD8FCC167D289A00F59669 /* Cocoa.framework */; };
+		38DD8FD7167D289A00F59669 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38DD8FD5167D289A00F59669 /* InfoPlist.strings */; };
+		38DD8FD9167D289A00F59669 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DD8FD8167D289A00F59669 /* main.m */; };
+		38DD8FDD167D289A00F59669 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 38DD8FDB167D289A00F59669 /* Credits.rtf */; };
+		38DD8FE0167D289A00F59669 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DD8FDF167D289A00F59669 /* AppDelegate.m */; };
+		38DD8FE3167D289A00F59669 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DD8FE1167D289A00F59669 /* MainMenu.xib */; };
+		38DD8FEB167D289A00F59669 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD8FEA167D289A00F59669 /* SenTestingKit.framework */; };
+		38DD8FEC167D289A00F59669 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD8FCC167D289A00F59669 /* Cocoa.framework */; };
+		38DD8FF4167D289A00F59669 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38DD8FF2167D289A00F59669 /* InfoPlist.strings */; };
+		38DD8FF7167D289A00F59669 /* SimpleSyncToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DD8FF6167D289A00F59669 /* SimpleSyncToolTests.m */; };
+		38DD9005167D296200F59669 /* DropboxOSX.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38DD9004167D296200F59669 /* DropboxOSX.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		38DD8FED167D289A00F59669 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 38DD8FBF167D289900F59669 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 38DD8FC7167D289900F59669;
+			remoteInfo = SimpleSyncTool;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		38DD9000167D28D300F59669 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				38DD9005167D296200F59669 /* DropboxOSX.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		38DD8FC8167D289900F59669 /* SimpleSyncTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSyncTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38DD8FCC167D289A00F59669 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		38DD8FCF167D289A00F59669 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		38DD8FD0167D289A00F59669 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		38DD8FD1167D289A00F59669 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		38DD8FD4167D289A00F59669 /* SimpleSyncTool-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleSyncTool-Info.plist"; sourceTree = "<group>"; };
+		38DD8FD6167D289A00F59669 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		38DD8FD8167D289A00F59669 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		38DD8FDA167D289A00F59669 /* SimpleSyncTool-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleSyncTool-Prefix.pch"; sourceTree = "<group>"; };
+		38DD8FDC167D289A00F59669 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		38DD8FDE167D289A00F59669 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		38DD8FDF167D289A00F59669 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		38DD8FE2167D289A00F59669 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		38DD8FE9167D289A00F59669 /* SimpleSyncToolTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSyncToolTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38DD8FEA167D289A00F59669 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		38DD8FF1167D289A00F59669 /* SimpleSyncToolTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleSyncToolTests-Info.plist"; sourceTree = "<group>"; };
+		38DD8FF3167D289A00F59669 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		38DD8FF5167D289A00F59669 /* SimpleSyncToolTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleSyncToolTests.h; sourceTree = "<group>"; };
+		38DD8FF6167D289A00F59669 /* SimpleSyncToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleSyncToolTests.m; sourceTree = "<group>"; };
+		38DD9004167D296200F59669 /* DropboxOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxOSX.framework; path = ../../../Frameworks/Dropbox/DropboxOSX.framework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		38DD8FC5167D289900F59669 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DD8FCD167D289A00F59669 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38DD8FE5167D289A00F59669 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DD8FEB167D289A00F59669 /* SenTestingKit.framework in Frameworks */,
+				38DD8FEC167D289A00F59669 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		38DD8FBD167D289900F59669 = {
+			isa = PBXGroup;
+			children = (
+				38DD8FD2167D289A00F59669 /* SimpleSyncTool */,
+				38DD8FEF167D289A00F59669 /* SimpleSyncToolTests */,
+				38DD8FCB167D289900F59669 /* Frameworks */,
+				38DD8FC9167D289900F59669 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		38DD8FC9167D289900F59669 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				38DD8FC8167D289900F59669 /* SimpleSyncTool.app */,
+				38DD8FE9167D289A00F59669 /* SimpleSyncToolTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		38DD8FCB167D289900F59669 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38DD9004167D296200F59669 /* DropboxOSX.framework */,
+				38DD8FCC167D289A00F59669 /* Cocoa.framework */,
+				38DD8FEA167D289A00F59669 /* SenTestingKit.framework */,
+				38DD8FCE167D289A00F59669 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		38DD8FCE167D289A00F59669 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38DD8FCF167D289A00F59669 /* AppKit.framework */,
+				38DD8FD0167D289A00F59669 /* CoreData.framework */,
+				38DD8FD1167D289A00F59669 /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		38DD8FD2167D289A00F59669 /* SimpleSyncTool */ = {
+			isa = PBXGroup;
+			children = (
+				38DD8FDE167D289A00F59669 /* AppDelegate.h */,
+				38DD8FDF167D289A00F59669 /* AppDelegate.m */,
+				38DD8FE1167D289A00F59669 /* MainMenu.xib */,
+				38DD8FD3167D289A00F59669 /* Supporting Files */,
+			);
+			path = SimpleSyncTool;
+			sourceTree = "<group>";
+		};
+		38DD8FD3167D289A00F59669 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38DD8FD4167D289A00F59669 /* SimpleSyncTool-Info.plist */,
+				38DD8FD5167D289A00F59669 /* InfoPlist.strings */,
+				38DD8FD8167D289A00F59669 /* main.m */,
+				38DD8FDA167D289A00F59669 /* SimpleSyncTool-Prefix.pch */,
+				38DD8FDB167D289A00F59669 /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		38DD8FEF167D289A00F59669 /* SimpleSyncToolTests */ = {
+			isa = PBXGroup;
+			children = (
+				38DD8FF5167D289A00F59669 /* SimpleSyncToolTests.h */,
+				38DD8FF6167D289A00F59669 /* SimpleSyncToolTests.m */,
+				38DD8FF0167D289A00F59669 /* Supporting Files */,
+			);
+			path = SimpleSyncToolTests;
+			sourceTree = "<group>";
+		};
+		38DD8FF0167D289A00F59669 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				38DD8FF1167D289A00F59669 /* SimpleSyncToolTests-Info.plist */,
+				38DD8FF2167D289A00F59669 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		38DD8FC7167D289900F59669 /* SimpleSyncTool */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38DD8FFA167D289A00F59669 /* Build configuration list for PBXNativeTarget "SimpleSyncTool" */;
+			buildPhases = (
+				38DD8FC4167D289900F59669 /* Sources */,
+				38DD8FC5167D289900F59669 /* Frameworks */,
+				38DD8FC6167D289900F59669 /* Resources */,
+				38DD9000167D28D300F59669 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleSyncTool;
+			productName = SimpleSyncTool;
+			productReference = 38DD8FC8167D289900F59669 /* SimpleSyncTool.app */;
+			productType = "com.apple.product-type.application";
+		};
+		38DD8FE8167D289A00F59669 /* SimpleSyncToolTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 38DD8FFD167D289A00F59669 /* Build configuration list for PBXNativeTarget "SimpleSyncToolTests" */;
+			buildPhases = (
+				38DD8FE4167D289A00F59669 /* Sources */,
+				38DD8FE5167D289A00F59669 /* Frameworks */,
+				38DD8FE6167D289A00F59669 /* Resources */,
+				38DD8FE7167D289A00F59669 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				38DD8FEE167D289A00F59669 /* PBXTargetDependency */,
+			);
+			name = SimpleSyncToolTests;
+			productName = SimpleSyncToolTests;
+			productReference = 38DD8FE9167D289A00F59669 /* SimpleSyncToolTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		38DD8FBF167D289900F59669 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Kevin Brandes";
+			};
+			buildConfigurationList = 38DD8FC2167D289900F59669 /* Build configuration list for PBXProject "SimpleSyncTool" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 38DD8FBD167D289900F59669;
+			productRefGroup = 38DD8FC9167D289900F59669 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				38DD8FC7167D289900F59669 /* SimpleSyncTool */,
+				38DD8FE8167D289A00F59669 /* SimpleSyncToolTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		38DD8FC6167D289900F59669 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DD8FD7167D289A00F59669 /* InfoPlist.strings in Resources */,
+				38DD8FDD167D289A00F59669 /* Credits.rtf in Resources */,
+				38DD8FE3167D289A00F59669 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38DD8FE6167D289A00F59669 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DD8FF4167D289A00F59669 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38DD8FE7167D289A00F59669 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		38DD8FC4167D289900F59669 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DD8FD9167D289A00F59669 /* main.m in Sources */,
+				38DD8FE0167D289A00F59669 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38DD8FE4167D289A00F59669 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38DD8FF7167D289A00F59669 /* SimpleSyncToolTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		38DD8FEE167D289A00F59669 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 38DD8FC7167D289900F59669 /* SimpleSyncTool */;
+			targetProxy = 38DD8FED167D289A00F59669 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		38DD8FD5167D289A00F59669 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38DD8FD6167D289A00F59669 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		38DD8FDB167D289A00F59669 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38DD8FDC167D289A00F59669 /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		38DD8FE1167D289A00F59669 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38DD8FE2167D289A00F59669 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		38DD8FF2167D289A00F59669 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				38DD8FF3167D289A00F59669 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		38DD8FF8167D289A00F59669 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		38DD8FF9167D289A00F59669 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		38DD8FFB167D289A00F59669 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Frameworks/Dropbox\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSyncTool/SimpleSyncTool-Prefix.pch";
+				INFOPLIST_FILE = "SimpleSyncTool/SimpleSyncTool-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		38DD8FFC167D289A00F59669 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../../Frameworks/Dropbox\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSyncTool/SimpleSyncTool-Prefix.pch";
+				INFOPLIST_FILE = "SimpleSyncTool/SimpleSyncTool-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		38DD8FFE167D289A00F59669 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimpleSyncTool.app/Contents/MacOS/SimpleSyncTool";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSyncTool/SimpleSyncTool-Prefix.pch";
+				INFOPLIST_FILE = "SimpleSyncToolTests/SimpleSyncToolTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		38DD8FFF167D289A00F59669 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/SimpleSyncTool.app/Contents/MacOS/SimpleSyncTool";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SimpleSyncTool/SimpleSyncTool-Prefix.pch";
+				INFOPLIST_FILE = "SimpleSyncToolTests/SimpleSyncToolTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		38DD8FC2167D289900F59669 /* Build configuration list for PBXProject "SimpleSyncTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38DD8FF8167D289A00F59669 /* Debug */,
+				38DD8FF9167D289A00F59669 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		38DD8FFA167D289A00F59669 /* Build configuration list for PBXNativeTarget "SimpleSyncTool" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38DD8FFB167D289A00F59669 /* Debug */,
+				38DD8FFC167D289A00F59669 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		38DD8FFD167D289A00F59669 /* Build configuration list for PBXNativeTarget "SimpleSyncToolTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38DD8FFE167D289A00F59669 /* Debug */,
+				38DD8FFF167D289A00F59669 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 38DD8FBF167D289900F59669 /* Project object */;
+}
