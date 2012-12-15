@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38DD8F74167D1C5B00F59669 /* DropboxOSX.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38DD8F73167D1C5B00F59669 /* DropboxOSX.framework */; };
+		38DD8F75167D1C7000F59669 /* DropboxOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD8F73167D1C5B00F59669 /* DropboxOSX.framework */; };
 		D36F2D8B14CCDF2E00082A5C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D36F2D8A14CCDF2E00082A5C /* Cocoa.framework */; };
 		D3B4C92D14D6620800A8E359 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3B4C92C14D6620800A8E359 /* WebKit.framework */; };
-		D3C2EC8C15089BE6004120AD /* DropboxOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D3C2EC8B15089BE6004120AD /* DropboxOSX.framework */; };
 		D3DE1F3615089D9100280C38 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE1F3015089D9100280C38 /* AppDelegate.m */; };
 		D3DE1F3815089D9100280C38 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3DE1F3315089D9100280C38 /* MainMenu.xib */; };
 		D3DE1F3915089D9100280C38 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3DE1F3515089D9100280C38 /* main.m */; };
-		D3DE1F4815089EF800280C38 /* DropboxOSX.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = D3C2EC8B15089BE6004120AD /* DropboxOSX.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,20 +23,20 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				D3DE1F4815089EF800280C38 /* DropboxOSX.framework in CopyFiles */,
+				38DD8F74167D1C5B00F59669 /* DropboxOSX.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		38DD8F73167D1C5B00F59669 /* DropboxOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxOSX.framework; path = ../../Frameworks/Dropbox/DropboxOSX.framework; sourceTree = "<group>"; };
 		D36F2D8614CCDF2E00082A5C /* DBRouletteOSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DBRouletteOSX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D36F2D8A14CCDF2E00082A5C /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		D36F2D8D14CCDF2E00082A5C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		D36F2D8E14CCDF2E00082A5C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		D36F2D8F14CCDF2E00082A5C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D3B4C92C14D6620800A8E359 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
-		D3C2EC8B15089BE6004120AD /* DropboxOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxOSX.framework; path = ../../DropboxOSX.framework; sourceTree = "<group>"; };
 		D3DE1F2F15089D9100280C38 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D3DE1F3015089D9100280C38 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D3DE1F3115089D9100280C38 /* DBRouletteOSX-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "DBRouletteOSX-Info.plist"; sourceTree = "<group>"; };
@@ -50,9 +50,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DD8F75167D1C7000F59669 /* DropboxOSX.framework in Frameworks */,
 				D3B4C92D14D6620800A8E359 /* WebKit.framework in Frameworks */,
 				D36F2D8B14CCDF2E00082A5C /* Cocoa.framework in Frameworks */,
-				D3C2EC8C15089BE6004120AD /* DropboxOSX.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,7 +79,7 @@
 		D36F2D8914CCDF2E00082A5C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				D3C2EC8B15089BE6004120AD /* DropboxOSX.framework */,
+				38DD8F73167D1C5B00F59669 /* DropboxOSX.framework */,
 				D36F2D8A14CCDF2E00082A5C /* Cocoa.framework */,
 				D3B4C92C14D6620800A8E359 /* WebKit.framework */,
 				D36F2D8C14CCDF2E00082A5C /* Other Frameworks */,
@@ -244,6 +244,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../..\"",
+					"\"$(SRCROOT)/../../Frameworks/Dropbox\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DBRouletteOSX/DBRouletteOSX-Prefix.pch";
@@ -260,6 +261,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../..\"",
+					"\"$(SRCROOT)/../../Frameworks/Dropbox\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DBRouletteOSX/DBRouletteOSX-Prefix.pch";
