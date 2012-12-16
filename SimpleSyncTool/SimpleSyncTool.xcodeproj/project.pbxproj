@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		389F0AEB167DF3E6004E1152 /* ConnectionSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 389F0AEA167DF3E6004E1152 /* ConnectionSettings.plist */; };
 		38DD8FCD167D289A00F59669 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD8FCC167D289A00F59669 /* Cocoa.framework */; };
 		38DD8FD7167D289A00F59669 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38DD8FD5167D289A00F59669 /* InfoPlist.strings */; };
 		38DD8FD9167D289A00F59669 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DD8FD8167D289A00F59669 /* main.m */; };
@@ -44,6 +45,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		389F0AEA167DF3E6004E1152 /* ConnectionSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConnectionSettings.plist; sourceTree = "<group>"; };
 		38DD8FC8167D289900F59669 /* SimpleSyncTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSyncTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DD8FCC167D289A00F59669 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		38DD8FCF167D289A00F59669 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -87,6 +89,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		389F0AE7167DF36F004E1152 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				38DD8FE1167D289A00F59669 /* MainMenu.xib */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+		389F0AE9167DF3A2004E1152 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				38DD8FDE167D289A00F59669 /* AppDelegate.h */,
+				38DD8FDF167D289A00F59669 /* AppDelegate.m */,
+				389F0AEA167DF3E6004E1152 /* ConnectionSettings.plist */,
+			);
+			name = App;
+			sourceTree = "<group>";
+		};
 		38DD8FBD167D289900F59669 = {
 			isa = PBXGroup;
 			children = (
@@ -130,9 +150,8 @@
 		38DD8FD2167D289A00F59669 /* SimpleSyncTool */ = {
 			isa = PBXGroup;
 			children = (
-				38DD8FDE167D289A00F59669 /* AppDelegate.h */,
-				38DD8FDF167D289A00F59669 /* AppDelegate.m */,
-				38DD8FE1167D289A00F59669 /* MainMenu.xib */,
+				389F0AE9167DF3A2004E1152 /* App */,
+				389F0AE7167DF36F004E1152 /* User Interface */,
 				38DD8FD3167D289A00F59669 /* Supporting Files */,
 			);
 			path = SimpleSyncTool;
@@ -244,6 +263,7 @@
 				38DD8FD7167D289A00F59669 /* InfoPlist.strings in Resources */,
 				38DD8FDD167D289A00F59669 /* Credits.rtf in Resources */,
 				38DD8FE3167D289A00F59669 /* MainMenu.xib in Resources */,
+				389F0AEB167DF3E6004E1152 /* ConnectionSettings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -471,6 +491,7 @@
 				38DD8FFC167D289A00F59669 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38DD8FFD167D289A00F59669 /* Build configuration list for PBXNativeTarget "SimpleSyncToolTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +500,7 @@
 				38DD8FFF167D289A00F59669 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
