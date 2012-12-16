@@ -30,6 +30,8 @@
 	<string>Copyright © 2012 Kevin Brandes. All rights reserved.</string>
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
+	<key>NSUIElement</key>
+	<string>1</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>
