@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191D3B2F1689B809002C69DB /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191D3B2E1689B809002C69DB /* Security.framework */; };
+		191D3B311689B815002C69DB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191D3B301689B815002C69DB /* SystemConfiguration.framework */; };
+		19283B3A1688B79500AA4AD4 /* GTL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19283B321688B78E00AA4AD4 /* GTL.framework */; };
+		19283B3B1688B7A300AA4AD4 /* GTL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19283B321688B78E00AA4AD4 /* GTL.framework */; };
+		19283B3D1688B7B800AA4AD4 /* GTLDrive_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = 19283B3C1688B7B800AA4AD4 /* GTLDrive_Sources.m */; };
 		38DD8FCD167D289A00F59669 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD8FCC167D289A00F59669 /* Cocoa.framework */; };
 		38DD8FD7167D289A00F59669 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38DD8FD5167D289A00F59669 /* InfoPlist.strings */; };
 		38DD8FD9167D289A00F59669 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DD8FD8167D289A00F59669 /* main.m */; };
@@ -17,10 +22,37 @@
 		38DD8FEC167D289A00F59669 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD8FCC167D289A00F59669 /* Cocoa.framework */; };
 		38DD8FF4167D289A00F59669 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38DD8FF2167D289A00F59669 /* InfoPlist.strings */; };
 		38DD8FF7167D289A00F59669 /* SimpleSyncToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DD8FF6167D289A00F59669 /* SimpleSyncToolTests.m */; };
-		38DD9005167D296200F59669 /* DropboxOSX.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38DD9004167D296200F59669 /* DropboxOSX.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		19283B311688B78E00AA4AD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19283B261688B78E00AA4AD4 /* GTL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F38F6A60B66E91D00B24B81;
+			remoteInfo = GTLFramework;
+		};
+		19283B331688B78E00AA4AD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19283B261688B78E00AA4AD4 /* GTL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F12027C11A4CA2F00BEB470;
+			remoteInfo = GTLTouchStaticLib;
+		};
+		19283B351688B78E00AA4AD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19283B261688B78E00AA4AD4 /* GTL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F12027D11A4CA2F00BEB470;
+			remoteInfo = GTLUnitTests;
+		};
+		19283B371688B78E00AA4AD4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 19283B261688B78E00AA4AD4 /* GTL.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4F1AD9020B71603F00DC0485;
+			remoteInfo = DevelopmentTestTool;
+		};
 		38DD8FED167D289A00F59669 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 38DD8FBF167D289900F59669 /* Project object */;
@@ -37,13 +69,17 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				38DD9005167D296200F59669 /* DropboxOSX.framework in CopyFiles */,
+				19283B3B1688B7A300AA4AD4 /* GTL.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		191D3B2E1689B809002C69DB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		191D3B301689B815002C69DB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		19283B261688B78E00AA4AD4 /* GTL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GTL.xcodeproj; path = "../../../google-api-objectivec-client-read-only/Source/GTL.xcodeproj"; sourceTree = "<group>"; };
+		19283B3C1688B7B800AA4AD4 /* GTLDrive_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLDrive_Sources.m; path = "../../../../google-api-objectivec-client-read-only/Source/Services/Drive/Generated/GTLDrive_Sources.m"; sourceTree = "<group>"; };
 		38DD8FC8167D289900F59669 /* SimpleSyncTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSyncTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DD8FCC167D289A00F59669 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		38DD8FCF167D289A00F59669 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -63,7 +99,6 @@
 		38DD8FF3167D289A00F59669 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		38DD8FF5167D289A00F59669 /* SimpleSyncToolTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleSyncToolTests.h; sourceTree = "<group>"; };
 		38DD8FF6167D289A00F59669 /* SimpleSyncToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleSyncToolTests.m; sourceTree = "<group>"; };
-		38DD9004167D296200F59669 /* DropboxOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxOSX.framework; path = ../../../Frameworks/Dropbox/DropboxOSX.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +106,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				191D3B311689B815002C69DB /* SystemConfiguration.framework in Frameworks */,
+				191D3B2F1689B809002C69DB /* Security.framework in Frameworks */,
+				19283B3A1688B79500AA4AD4 /* GTL.framework in Frameworks */,
 				38DD8FCD167D289A00F59669 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -87,6 +125,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19283B271688B78E00AA4AD4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19283B321688B78E00AA4AD4 /* GTL.framework */,
+				19283B341688B78E00AA4AD4 /* libGTLTouchStaticLib.a */,
+				19283B361688B78E00AA4AD4 /* GTLUnitTests.octest */,
+				19283B381688B78E00AA4AD4 /* DevelopmentTestTool */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		38DD8FBD167D289900F59669 = {
 			isa = PBXGroup;
 			children = (
@@ -109,7 +158,9 @@
 		38DD8FCB167D289900F59669 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				38DD9004167D296200F59669 /* DropboxOSX.framework */,
+				191D3B301689B815002C69DB /* SystemConfiguration.framework */,
+				191D3B2E1689B809002C69DB /* Security.framework */,
+				19283B261688B78E00AA4AD4 /* GTL.xcodeproj */,
 				38DD8FCC167D289A00F59669 /* Cocoa.framework */,
 				38DD8FEA167D289A00F59669 /* SenTestingKit.framework */,
 				38DD8FCE167D289A00F59669 /* Other Frameworks */,
@@ -130,6 +181,7 @@
 		38DD8FD2167D289A00F59669 /* SimpleSyncTool */ = {
 			isa = PBXGroup;
 			children = (
+				19283B3C1688B7B800AA4AD4 /* GTLDrive_Sources.m */,
 				38DD8FDE167D289A00F59669 /* AppDelegate.h */,
 				38DD8FDF167D289A00F59669 /* AppDelegate.m */,
 				38DD8FE1167D289A00F59669 /* MainMenu.xib */,
@@ -176,10 +228,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 38DD8FFA167D289A00F59669 /* Build configuration list for PBXNativeTarget "SimpleSyncTool" */;
 			buildPhases = (
+				38DD8FC6167D289900F59669 /* Resources */,
 				38DD8FC4167D289900F59669 /* Sources */,
 				38DD8FC5167D289900F59669 /* Frameworks */,
-				38DD8FC6167D289900F59669 /* Resources */,
 				38DD9000167D28D300F59669 /* CopyFiles */,
+				191D3B2D1689B69A002C69DB /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -228,6 +281,12 @@
 			mainGroup = 38DD8FBD167D289900F59669;
 			productRefGroup = 38DD8FC9167D289900F59669 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 19283B271688B78E00AA4AD4 /* Products */;
+					ProjectRef = 19283B261688B78E00AA4AD4 /* GTL.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				38DD8FC7167D289900F59669 /* SimpleSyncTool */,
@@ -235,6 +294,37 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		19283B321688B78E00AA4AD4 /* GTL.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = GTL.framework;
+			remoteRef = 19283B311688B78E00AA4AD4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19283B341688B78E00AA4AD4 /* libGTLTouchStaticLib.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libGTLTouchStaticLib.a;
+			remoteRef = 19283B331688B78E00AA4AD4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19283B361688B78E00AA4AD4 /* GTLUnitTests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = GTLUnitTests.octest;
+			remoteRef = 19283B351688B78E00AA4AD4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		19283B381688B78E00AA4AD4 /* DevelopmentTestTool */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = DevelopmentTestTool;
+			remoteRef = 19283B371688B78E00AA4AD4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		38DD8FC6167D289900F59669 /* Resources */ = {
@@ -258,6 +348,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		191D3B2D1689B69A002C69DB /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = ./buildStripHeaders;
+		};
 		38DD8FE7167D289A00F59669 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38DD8FD9167D289A00F59669 /* main.m in Sources */,
+				19283B3D1688B7B800AA4AD4 /* GTLDrive_Sources.m in Sources */,
 				38DD8FE0167D289A00F59669 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,15 +497,27 @@
 		38DD8FFB167D289A00F59669 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Frameworks/Dropbox\"",
 				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Source/build/$(CONFIGURATION)/";
+				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleSyncTool/SimpleSyncTool-Prefix.pch";
 				INFOPLIST_FILE = "SimpleSyncTool/SimpleSyncTool-Info.plist";
+				OTHER_CFLAGS = (
+					"-DGTL_BUILT_AS_FRAMEWORK=1",
+					"-DDEBUG=1",
+				);
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/fabianintrovigne/Develop/google-api-objectivec-client-read-only/Source";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -409,15 +525,24 @@
 		38DD8FFC167D289A00F59669 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/../../../Frameworks/Dropbox\"",
 				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_1 = "\"$(SRCROOT)/../../Source/build/$(CONFIGURATION)/";
+				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SimpleSyncTool/SimpleSyncTool-Prefix.pch";
 				INFOPLIST_FILE = "SimpleSyncTool/SimpleSyncTool-Info.plist";
+				OTHER_CFLAGS = "-DGTL_BUILT_AS_FRAMEWORK=1";
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "/Users/fabianintrovigne/Develop/google-api-objectivec-client-read-only/Source";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -471,6 +596,7 @@
 				38DD8FFC167D289A00F59669 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		38DD8FFD167D289A00F59669 /* Build configuration list for PBXNativeTarget "SimpleSyncToolTests" */ = {
 			isa = XCConfigurationList;
@@ -479,6 +605,7 @@
 				38DD8FFF167D289A00F59669 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
