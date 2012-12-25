@@ -7,6 +7,8 @@
 //
 
 #import <Cocoa/Cocoa.h>
+#import "GTLDrive.h"
+#import "GTL/GTMOAuth2WindowController.h"
 
 @interface AppDelegate : NSObject <NSApplicationDelegate>
 
