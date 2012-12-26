@@ -2,6 +2,17 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>Dropbox SDK</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>db-7vfsfnffjeosyq7</string>
+			</array>
+		</dict>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleExecutable</key>
@@ -31,7 +42,7 @@
 	<key>NSMainNibFile</key>
 	<string>MainMenu</string>
 	<key>NSUIElement</key>
-	<string>1</string>
+	<string>0</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 </dict>
