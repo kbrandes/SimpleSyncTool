@@ -10,7 +10,6 @@
 		38743D6E168B8B53005379B2 /* GoogleDriveCloudService.m in Sources */ = {isa = PBXBuildFile; fileRef = 38743D6D168B8B53005379B2 /* GoogleDriveCloudService.m */; };
 		38743D71168B8BBF005379B2 /* DropboxCloudService.m in Sources */ = {isa = PBXBuildFile; fileRef = 38743D70168B8BBF005379B2 /* DropboxCloudService.m */; };
 		38955C05168F82A4000EB8DA /* ConnectionSettings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38955C04168F82A4000EB8DA /* ConnectionSettings.plist */; };
-		38955E88168F860B000EB8DA /* DropboxOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38955E87168F850F000EB8DA /* DropboxOSX.framework */; };
 		38DD8FCD167D289A00F59669 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD8FCC167D289A00F59669 /* Cocoa.framework */; };
 		38DD8FD7167D289A00F59669 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38DD8FD5167D289A00F59669 /* InfoPlist.strings */; };
 		38DD8FD9167D289A00F59669 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DD8FD8167D289A00F59669 /* main.m */; };
@@ -21,30 +20,11 @@
 		38DD8FEC167D289A00F59669 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD8FCC167D289A00F59669 /* Cocoa.framework */; };
 		38DD8FF4167D289A00F59669 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38DD8FF2167D289A00F59669 /* InfoPlist.strings */; };
 		38DD8FF7167D289A00F59669 /* SimpleSyncToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DD8FF6167D289A00F59669 /* SimpleSyncToolTests.m */; };
+		38E9D39B16932B040069986A /* DropboxAPI in Resources */ = {isa = PBXBuildFile; fileRef = 38E9D39A16932B030069986A /* DropboxAPI */; };
+		38E9D3A016932B9E0069986A /* DropboxOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E9D39F16932B9E0069986A /* DropboxOSX.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		38955E82168F850F000EB8DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 38955E77168F850F000EB8DA /* DropboxSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D3196B831412FE180060E7C6;
-			remoteInfo = DropboxSDK;
-		};
-		38955E84168F850F000EB8DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 38955E77168F850F000EB8DA /* DropboxSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D3933BE5145F12AD00E15FA7;
-			remoteInfo = SDropboxSDK;
-		};
-		38955E86168F850F000EB8DA /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 38955E77168F850F000EB8DA /* DropboxSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = D36931CC15088350003FBA23;
-			remoteInfo = DropboxOSX;
-		};
 		38DD8FED167D289A00F59669 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 38DD8FBF167D289900F59669 /* Project object */;
@@ -73,109 +53,6 @@
 		38743D6F168B8BBF005379B2 /* DropboxCloudService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DropboxCloudService.h; path = CloudServices/Dropbox/DropboxCloudService.h; sourceTree = "<group>"; };
 		38743D70168B8BBF005379B2 /* DropboxCloudService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DropboxCloudService.m; path = CloudServices/Dropbox/DropboxCloudService.m; sourceTree = "<group>"; };
 		38955C04168F82A4000EB8DA /* ConnectionSettings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ConnectionSettings.plist; sourceTree = "<group>"; };
-		38955E0D168F850F000EB8DA /* CHANGELOG */ = {isa = PBXFileReference; lastKnownFileType = text; path = CHANGELOG; sourceTree = "<group>"; };
-		38955E0E168F850F000EB8DA /* DropboxOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DropboxOSX.framework; sourceTree = "<group>"; };
-		38955E11168F850F000EB8DA /* DBAccountInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBAccountInfo.m; sourceTree = "<group>"; };
-		38955E12168F850F000EB8DA /* DBAuthHelperOSX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBAuthHelperOSX.m; sourceTree = "<group>"; };
-		38955E13168F850F000EB8DA /* DBConnectController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBConnectController.m; sourceTree = "<group>"; };
-		38955E14168F850F000EB8DA /* DBDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBDefines.h; sourceTree = "<group>"; };
-		38955E15168F850F000EB8DA /* DBDeltaEntry.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBDeltaEntry.m; sourceTree = "<group>"; };
-		38955E16168F850F000EB8DA /* DBError.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBError.m; sourceTree = "<group>"; };
-		38955E17168F850F000EB8DA /* DBKeychain-iOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DBKeychain-iOS.m"; sourceTree = "<group>"; };
-		38955E18168F850F000EB8DA /* DBKeychain-OSX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DBKeychain-OSX.m"; sourceTree = "<group>"; };
-		38955E19168F850F000EB8DA /* DBLog.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBLog.m; sourceTree = "<group>"; };
-		38955E1A168F850F000EB8DA /* DBMetadata.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBMetadata.m; sourceTree = "<group>"; };
-		38955E1B168F850F000EB8DA /* DBQuota.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBQuota.m; sourceTree = "<group>"; };
-		38955E1C168F850F000EB8DA /* DBRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBRequest.m; sourceTree = "<group>"; };
-		38955E1D168F850F000EB8DA /* DBRestClient+OSX.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DBRestClient+OSX.m"; sourceTree = "<group>"; };
-		38955E1E168F850F000EB8DA /* DBRestClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBRestClient.m; sourceTree = "<group>"; };
-		38955E1F168F850F000EB8DA /* DBSession+iOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "DBSession+iOS.m"; sourceTree = "<group>"; };
-		38955E20168F850F000EB8DA /* DBSession.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBSession.m; sourceTree = "<group>"; };
-		38955E21168F850F000EB8DA /* DropboxOSX-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropboxOSX-Info.plist"; sourceTree = "<group>"; };
-		38955E22168F850F000EB8DA /* DropboxOSX-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DropboxOSX-Prefix.pch"; sourceTree = "<group>"; };
-		38955E24168F850F000EB8DA /* Base64Transcoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
-		38955E25168F850F000EB8DA /* DBAccountInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBAccountInfo.h; sourceTree = "<group>"; };
-		38955E26168F850F000EB8DA /* DBAuthHelperOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBAuthHelperOSX.h; sourceTree = "<group>"; };
-		38955E27168F850F000EB8DA /* DBConnectController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBConnectController.h; sourceTree = "<group>"; };
-		38955E28168F850F000EB8DA /* DBDeltaEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBDeltaEntry.h; sourceTree = "<group>"; };
-		38955E29168F850F000EB8DA /* DBError.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBError.h; sourceTree = "<group>"; };
-		38955E2A168F850F000EB8DA /* DBJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBJSON.h; sourceTree = "<group>"; };
-		38955E2B168F850F000EB8DA /* DBJsonBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBJsonBase.h; sourceTree = "<group>"; };
-		38955E2C168F850F000EB8DA /* DBJsonParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBJsonParser.h; sourceTree = "<group>"; };
-		38955E2D168F850F000EB8DA /* DBJsonWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBJsonWriter.h; sourceTree = "<group>"; };
-		38955E2E168F850F000EB8DA /* DBKeychain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBKeychain.h; sourceTree = "<group>"; };
-		38955E2F168F850F000EB8DA /* DBLog.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBLog.h; sourceTree = "<group>"; };
-		38955E30168F850F000EB8DA /* DBMetadata.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBMetadata.h; sourceTree = "<group>"; };
-		38955E31168F850F000EB8DA /* DBQuota.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBQuota.h; sourceTree = "<group>"; };
-		38955E32168F850F000EB8DA /* DBRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBRequest.h; sourceTree = "<group>"; };
-		38955E33168F850F000EB8DA /* DBRestClient+OSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DBRestClient+OSX.h"; sourceTree = "<group>"; };
-		38955E34168F850F000EB8DA /* DBRestClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBRestClient.h; sourceTree = "<group>"; };
-		38955E35168F850F000EB8DA /* DBSession+iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DBSession+iOS.h"; sourceTree = "<group>"; };
-		38955E36168F850F000EB8DA /* DBSession.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBSession.h; sourceTree = "<group>"; };
-		38955E37168F850F000EB8DA /* DropboxOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropboxOSX.h; sourceTree = "<group>"; };
-		38955E38168F850F000EB8DA /* DropboxSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropboxSDK.h; sourceTree = "<group>"; };
-		38955E39168F850F000EB8DA /* JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		38955E3A168F850F000EB8DA /* MPDebug.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPDebug.h; sourceTree = "<group>"; };
-		38955E3B168F850F000EB8DA /* MPOAuth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPOAuth.h; sourceTree = "<group>"; };
-		38955E3C168F850F000EB8DA /* MPOAuthAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPOAuthAPI.h; sourceTree = "<group>"; };
-		38955E3D168F850F000EB8DA /* MPOAuthAPIRequestLoader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPOAuthAPIRequestLoader.h; sourceTree = "<group>"; };
-		38955E3E168F850F000EB8DA /* MPOAuthAuthenticationMethod.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPOAuthAuthenticationMethod.h; sourceTree = "<group>"; };
-		38955E3F168F850F000EB8DA /* MPOAuthAuthenticationMethodOAuth.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPOAuthAuthenticationMethodOAuth.h; sourceTree = "<group>"; };
-		38955E40168F850F000EB8DA /* MPOAuthConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPOAuthConnection.h; sourceTree = "<group>"; };
-		38955E41168F850F000EB8DA /* MPOAuthCredentialConcreteStore+KeychainAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MPOAuthCredentialConcreteStore+KeychainAdditions.h"; sourceTree = "<group>"; };
-		38955E42168F850F000EB8DA /* MPOAuthCredentialConcreteStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPOAuthCredentialConcreteStore.h; sourceTree = "<group>"; };
-		38955E43168F850F000EB8DA /* MPOAuthCredentialStore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPOAuthCredentialStore.h; sourceTree = "<group>"; };
-		38955E44168F850F000EB8DA /* MPOAuthParameterFactory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPOAuthParameterFactory.h; sourceTree = "<group>"; };
-		38955E45168F850F000EB8DA /* MPOAuthSignatureParameter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPOAuthSignatureParameter.h; sourceTree = "<group>"; };
-		38955E46168F850F000EB8DA /* MPOAuthURLRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPOAuthURLRequest.h; sourceTree = "<group>"; };
-		38955E47168F850F000EB8DA /* MPOAuthURLResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPOAuthURLResponse.h; sourceTree = "<group>"; };
-		38955E48168F850F000EB8DA /* MPURLRequestParameter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MPURLRequestParameter.h; sourceTree = "<group>"; };
-		38955E49168F850F000EB8DA /* NSDictionary+Dropbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Dropbox.h"; sourceTree = "<group>"; };
-		38955E4A168F850F000EB8DA /* NSObject+DBJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+DBJSON.h"; sourceTree = "<group>"; };
-		38955E4B168F850F000EB8DA /* NSString+DBJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DBJSON.h"; sourceTree = "<group>"; };
-		38955E4C168F850F000EB8DA /* NSString+Dropbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Dropbox.h"; sourceTree = "<group>"; };
-		38955E4D168F850F000EB8DA /* NSString+URLEscapingAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEscapingAdditions.h"; sourceTree = "<group>"; };
-		38955E4E168F850F000EB8DA /* NSURL+MPURLParameterAdditions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURL+MPURLParameterAdditions.h"; sourceTree = "<group>"; };
-		38955E4F168F850F000EB8DA /* NSURLResponse+Encoding.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSURLResponse+Encoding.h"; sourceTree = "<group>"; };
-		38955E50168F850F000EB8DA /* UIAlertView+Dropbox.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+Dropbox.h"; sourceTree = "<group>"; };
-		38955E51168F850F000EB8DA /* DropboxSDK-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DropboxSDK-Info.plist"; sourceTree = "<group>"; };
-		38955E52168F850F000EB8DA /* DropboxSDK-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DropboxSDK-Prefix.pch"; sourceTree = "<group>"; };
-		38955E53168F850F000EB8DA /* DropboxSDK_Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DropboxSDK_Prefix.pch; sourceTree = "<group>"; };
-		38955E55168F850F000EB8DA /* DBJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBJSON.h; sourceTree = "<group>"; };
-		38955E56168F850F000EB8DA /* DBJSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBJSON.m; sourceTree = "<group>"; };
-		38955E57168F850F000EB8DA /* DBJsonBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBJsonBase.h; sourceTree = "<group>"; };
-		38955E58168F850F000EB8DA /* DBJsonBase.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBJsonBase.m; sourceTree = "<group>"; };
-		38955E59168F850F000EB8DA /* DBJsonParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBJsonParser.h; sourceTree = "<group>"; };
-		38955E5A168F850F000EB8DA /* DBJsonParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBJsonParser.m; sourceTree = "<group>"; };
-		38955E5B168F850F000EB8DA /* DBJsonWriter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DBJsonWriter.h; sourceTree = "<group>"; };
-		38955E5C168F850F000EB8DA /* DBJsonWriter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DBJsonWriter.m; sourceTree = "<group>"; };
-		38955E5D168F850F000EB8DA /* JSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSON.h; sourceTree = "<group>"; };
-		38955E5E168F850F000EB8DA /* NSObject+DBJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+DBJSON.h"; sourceTree = "<group>"; };
-		38955E5F168F850F000EB8DA /* NSObject+DBJSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+DBJSON.m"; sourceTree = "<group>"; };
-		38955E60168F850F000EB8DA /* NSString+DBJSON.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+DBJSON.h"; sourceTree = "<group>"; };
-		38955E61168F850F000EB8DA /* NSString+DBJSON.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+DBJSON.m"; sourceTree = "<group>"; };
-		38955E64168F850F000EB8DA /* Base64Transcoder.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
-		38955E65168F850F000EB8DA /* MPOAuthAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPOAuthAPI.m; sourceTree = "<group>"; };
-		38955E66168F850F000EB8DA /* MPOAuthAPIRequestLoader.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPOAuthAPIRequestLoader.m; sourceTree = "<group>"; };
-		38955E67168F850F000EB8DA /* MPOAuthAuthenticationMethod.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPOAuthAuthenticationMethod.m; sourceTree = "<group>"; };
-		38955E68168F850F000EB8DA /* MPOAuthAuthenticationMethodOAuth.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPOAuthAuthenticationMethodOAuth.m; sourceTree = "<group>"; };
-		38955E69168F850F000EB8DA /* MPOAuthConnection.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPOAuthConnection.m; sourceTree = "<group>"; };
-		38955E6A168F850F000EB8DA /* MPOAuthCredentiaIConcreteStore+KeychainAdditionsMac.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MPOAuthCredentiaIConcreteStore+KeychainAdditionsMac.m"; sourceTree = "<group>"; };
-		38955E6B168F850F000EB8DA /* MPOAuthCredentialConcreteStore+KeychainAdditionsiPhone.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "MPOAuthCredentialConcreteStore+KeychainAdditionsiPhone.m"; sourceTree = "<group>"; };
-		38955E6C168F850F000EB8DA /* MPOAuthCredentialConcreteStore.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPOAuthCredentialConcreteStore.m; sourceTree = "<group>"; };
-		38955E6D168F850F000EB8DA /* MPOAuthSignatureParameter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPOAuthSignatureParameter.m; sourceTree = "<group>"; };
-		38955E6E168F850F000EB8DA /* MPOAuthURLRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPOAuthURLRequest.m; sourceTree = "<group>"; };
-		38955E6F168F850F000EB8DA /* MPOAuthURLResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPOAuthURLResponse.m; sourceTree = "<group>"; };
-		38955E70168F850F000EB8DA /* MPURLRequestParameter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MPURLRequestParameter.m; sourceTree = "<group>"; };
-		38955E71168F850F000EB8DA /* NSString+URLEscapingAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEscapingAdditions.m"; sourceTree = "<group>"; };
-		38955E72168F850F000EB8DA /* NSURL+MPURLParameterAdditions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURL+MPURLParameterAdditions.m"; sourceTree = "<group>"; };
-		38955E73168F850F000EB8DA /* NSURLResponse+Encoding.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSURLResponse+Encoding.m"; sourceTree = "<group>"; };
-		38955E74168F850F000EB8DA /* NSDictionary+Dropbox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Dropbox.m"; sourceTree = "<group>"; };
-		38955E75168F850F000EB8DA /* NSString+Dropbox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+Dropbox.m"; sourceTree = "<group>"; };
-		38955E76168F850F000EB8DA /* UIAlertView+Dropbox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+Dropbox.m"; sourceTree = "<group>"; };
-		38955E77168F850F000EB8DA /* DropboxSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = DropboxSDK.xcodeproj; sourceTree = "<group>"; };
-		38955E7A168F850F000EB8DA /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		38955E7B168F850F000EB8DA /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		38DD8FC8167D289900F59669 /* SimpleSyncTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSyncTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DD8FCC167D289A00F59669 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		38DD8FCF167D289A00F59669 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -195,6 +72,8 @@
 		38DD8FF3167D289A00F59669 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		38DD8FF5167D289A00F59669 /* SimpleSyncToolTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleSyncToolTests.h; sourceTree = "<group>"; };
 		38DD8FF6167D289A00F59669 /* SimpleSyncToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleSyncToolTests.m; sourceTree = "<group>"; };
+		38E9D39A16932B030069986A /* DropboxAPI */ = {isa = PBXFileReference; lastKnownFileType = folder; path = DropboxAPI; sourceTree = "<group>"; };
+		38E9D39F16932B9E0069986A /* DropboxOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = DropboxOSX.framework; path = DropboxAPI/DropboxSDK/build/Release/DropboxOSX.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,7 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38955E88168F860B000EB8DA /* DropboxOSX.framework in Frameworks */,
+				38E9D3A016932B9E0069986A /* DropboxOSX.framework in Frameworks */,
 				38DD8FCD167D289A00F59669 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,174 +150,6 @@
 			name = "Google Drive";
 			sourceTree = "<group>";
 		};
-		38955E0C168F850F000EB8DA /* Dropbox */ = {
-			isa = PBXGroup;
-			children = (
-				38955E0D168F850F000EB8DA /* CHANGELOG */,
-				38955E0E168F850F000EB8DA /* DropboxOSX.framework */,
-				38955E0F168F850F000EB8DA /* DropboxSDK */,
-				38955E7A168F850F000EB8DA /* LICENSE */,
-				38955E7B168F850F000EB8DA /* README */,
-			);
-			path = Dropbox;
-			sourceTree = "<group>";
-		};
-		38955E0F168F850F000EB8DA /* DropboxSDK */ = {
-			isa = PBXGroup;
-			children = (
-				38955E10168F850F000EB8DA /* Classes */,
-				38955E77168F850F000EB8DA /* DropboxSDK.xcodeproj */,
-			);
-			path = DropboxSDK;
-			sourceTree = "<group>";
-		};
-		38955E10168F850F000EB8DA /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				38955E11168F850F000EB8DA /* DBAccountInfo.m */,
-				38955E12168F850F000EB8DA /* DBAuthHelperOSX.m */,
-				38955E13168F850F000EB8DA /* DBConnectController.m */,
-				38955E14168F850F000EB8DA /* DBDefines.h */,
-				38955E15168F850F000EB8DA /* DBDeltaEntry.m */,
-				38955E16168F850F000EB8DA /* DBError.m */,
-				38955E17168F850F000EB8DA /* DBKeychain-iOS.m */,
-				38955E18168F850F000EB8DA /* DBKeychain-OSX.m */,
-				38955E19168F850F000EB8DA /* DBLog.m */,
-				38955E1A168F850F000EB8DA /* DBMetadata.m */,
-				38955E1B168F850F000EB8DA /* DBQuota.m */,
-				38955E1C168F850F000EB8DA /* DBRequest.m */,
-				38955E1D168F850F000EB8DA /* DBRestClient+OSX.m */,
-				38955E1E168F850F000EB8DA /* DBRestClient.m */,
-				38955E1F168F850F000EB8DA /* DBSession+iOS.m */,
-				38955E20168F850F000EB8DA /* DBSession.m */,
-				38955E21168F850F000EB8DA /* DropboxOSX-Info.plist */,
-				38955E22168F850F000EB8DA /* DropboxOSX-Prefix.pch */,
-				38955E23168F850F000EB8DA /* DropboxSDK */,
-				38955E51168F850F000EB8DA /* DropboxSDK-Info.plist */,
-				38955E52168F850F000EB8DA /* DropboxSDK-Prefix.pch */,
-				38955E53168F850F000EB8DA /* DropboxSDK_Prefix.pch */,
-				38955E54168F850F000EB8DA /* JSON */,
-				38955E62168F850F000EB8DA /* MPOAuth */,
-				38955E74168F850F000EB8DA /* NSDictionary+Dropbox.m */,
-				38955E75168F850F000EB8DA /* NSString+Dropbox.m */,
-				38955E76168F850F000EB8DA /* UIAlertView+Dropbox.m */,
-			);
-			path = Classes;
-			sourceTree = "<group>";
-		};
-		38955E23168F850F000EB8DA /* DropboxSDK */ = {
-			isa = PBXGroup;
-			children = (
-				38955E24168F850F000EB8DA /* Base64Transcoder.h */,
-				38955E25168F850F000EB8DA /* DBAccountInfo.h */,
-				38955E26168F850F000EB8DA /* DBAuthHelperOSX.h */,
-				38955E27168F850F000EB8DA /* DBConnectController.h */,
-				38955E28168F850F000EB8DA /* DBDeltaEntry.h */,
-				38955E29168F850F000EB8DA /* DBError.h */,
-				38955E2A168F850F000EB8DA /* DBJSON.h */,
-				38955E2B168F850F000EB8DA /* DBJsonBase.h */,
-				38955E2C168F850F000EB8DA /* DBJsonParser.h */,
-				38955E2D168F850F000EB8DA /* DBJsonWriter.h */,
-				38955E2E168F850F000EB8DA /* DBKeychain.h */,
-				38955E2F168F850F000EB8DA /* DBLog.h */,
-				38955E30168F850F000EB8DA /* DBMetadata.h */,
-				38955E31168F850F000EB8DA /* DBQuota.h */,
-				38955E32168F850F000EB8DA /* DBRequest.h */,
-				38955E33168F850F000EB8DA /* DBRestClient+OSX.h */,
-				38955E34168F850F000EB8DA /* DBRestClient.h */,
-				38955E35168F850F000EB8DA /* DBSession+iOS.h */,
-				38955E36168F850F000EB8DA /* DBSession.h */,
-				38955E37168F850F000EB8DA /* DropboxOSX.h */,
-				38955E38168F850F000EB8DA /* DropboxSDK.h */,
-				38955E39168F850F000EB8DA /* JSON.h */,
-				38955E3A168F850F000EB8DA /* MPDebug.h */,
-				38955E3B168F850F000EB8DA /* MPOAuth.h */,
-				38955E3C168F850F000EB8DA /* MPOAuthAPI.h */,
-				38955E3D168F850F000EB8DA /* MPOAuthAPIRequestLoader.h */,
-				38955E3E168F850F000EB8DA /* MPOAuthAuthenticationMethod.h */,
-				38955E3F168F850F000EB8DA /* MPOAuthAuthenticationMethodOAuth.h */,
-				38955E40168F850F000EB8DA /* MPOAuthConnection.h */,
-				38955E41168F850F000EB8DA /* MPOAuthCredentialConcreteStore+KeychainAdditions.h */,
-				38955E42168F850F000EB8DA /* MPOAuthCredentialConcreteStore.h */,
-				38955E43168F850F000EB8DA /* MPOAuthCredentialStore.h */,
-				38955E44168F850F000EB8DA /* MPOAuthParameterFactory.h */,
-				38955E45168F850F000EB8DA /* MPOAuthSignatureParameter.h */,
-				38955E46168F850F000EB8DA /* MPOAuthURLRequest.h */,
-				38955E47168F850F000EB8DA /* MPOAuthURLResponse.h */,
-				38955E48168F850F000EB8DA /* MPURLRequestParameter.h */,
-				38955E49168F850F000EB8DA /* NSDictionary+Dropbox.h */,
-				38955E4A168F850F000EB8DA /* NSObject+DBJSON.h */,
-				38955E4B168F850F000EB8DA /* NSString+DBJSON.h */,
-				38955E4C168F850F000EB8DA /* NSString+Dropbox.h */,
-				38955E4D168F850F000EB8DA /* NSString+URLEscapingAdditions.h */,
-				38955E4E168F850F000EB8DA /* NSURL+MPURLParameterAdditions.h */,
-				38955E4F168F850F000EB8DA /* NSURLResponse+Encoding.h */,
-				38955E50168F850F000EB8DA /* UIAlertView+Dropbox.h */,
-			);
-			path = DropboxSDK;
-			sourceTree = "<group>";
-		};
-		38955E54168F850F000EB8DA /* JSON */ = {
-			isa = PBXGroup;
-			children = (
-				38955E55168F850F000EB8DA /* DBJSON.h */,
-				38955E56168F850F000EB8DA /* DBJSON.m */,
-				38955E57168F850F000EB8DA /* DBJsonBase.h */,
-				38955E58168F850F000EB8DA /* DBJsonBase.m */,
-				38955E59168F850F000EB8DA /* DBJsonParser.h */,
-				38955E5A168F850F000EB8DA /* DBJsonParser.m */,
-				38955E5B168F850F000EB8DA /* DBJsonWriter.h */,
-				38955E5C168F850F000EB8DA /* DBJsonWriter.m */,
-				38955E5D168F850F000EB8DA /* JSON.h */,
-				38955E5E168F850F000EB8DA /* NSObject+DBJSON.h */,
-				38955E5F168F850F000EB8DA /* NSObject+DBJSON.m */,
-				38955E60168F850F000EB8DA /* NSString+DBJSON.h */,
-				38955E61168F850F000EB8DA /* NSString+DBJSON.m */,
-			);
-			path = JSON;
-			sourceTree = "<group>";
-		};
-		38955E62168F850F000EB8DA /* MPOAuth */ = {
-			isa = PBXGroup;
-			children = (
-				38955E63168F850F000EB8DA /* Crypto */,
-				38955E65168F850F000EB8DA /* MPOAuthAPI.m */,
-				38955E66168F850F000EB8DA /* MPOAuthAPIRequestLoader.m */,
-				38955E67168F850F000EB8DA /* MPOAuthAuthenticationMethod.m */,
-				38955E68168F850F000EB8DA /* MPOAuthAuthenticationMethodOAuth.m */,
-				38955E69168F850F000EB8DA /* MPOAuthConnection.m */,
-				38955E6A168F850F000EB8DA /* MPOAuthCredentiaIConcreteStore+KeychainAdditionsMac.m */,
-				38955E6B168F850F000EB8DA /* MPOAuthCredentialConcreteStore+KeychainAdditionsiPhone.m */,
-				38955E6C168F850F000EB8DA /* MPOAuthCredentialConcreteStore.m */,
-				38955E6D168F850F000EB8DA /* MPOAuthSignatureParameter.m */,
-				38955E6E168F850F000EB8DA /* MPOAuthURLRequest.m */,
-				38955E6F168F850F000EB8DA /* MPOAuthURLResponse.m */,
-				38955E70168F850F000EB8DA /* MPURLRequestParameter.m */,
-				38955E71168F850F000EB8DA /* NSString+URLEscapingAdditions.m */,
-				38955E72168F850F000EB8DA /* NSURL+MPURLParameterAdditions.m */,
-				38955E73168F850F000EB8DA /* NSURLResponse+Encoding.m */,
-			);
-			path = MPOAuth;
-			sourceTree = "<group>";
-		};
-		38955E63168F850F000EB8DA /* Crypto */ = {
-			isa = PBXGroup;
-			children = (
-				38955E64168F850F000EB8DA /* Base64Transcoder.c */,
-			);
-			path = Crypto;
-			sourceTree = "<group>";
-		};
-		38955E78168F850F000EB8DA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				38955E83168F850F000EB8DA /* DropboxSDK.framework */,
-				38955E85168F850F000EB8DA /* libSDropboxSDK.a */,
-				38955E87168F850F000EB8DA /* DropboxOSX.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		38DD8FBD167D289900F59669 = {
 			isa = PBXGroup;
 			children = (
@@ -461,7 +172,8 @@
 		38DD8FCB167D289900F59669 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				38955E0C168F850F000EB8DA /* Dropbox */,
+				38E9D39F16932B9E0069986A /* DropboxOSX.framework */,
+				38E9D39A16932B030069986A /* DropboxAPI */,
 				38DD8FCC167D289A00F59669 /* Cocoa.framework */,
 				38DD8FEA167D289A00F59669 /* SenTestingKit.framework */,
 				38DD8FCE167D289A00F59669 /* Other Frameworks */,
@@ -582,12 +294,6 @@
 			mainGroup = 38DD8FBD167D289900F59669;
 			productRefGroup = 38DD8FC9167D289900F59669 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 38955E78168F850F000EB8DA /* Products */;
-					ProjectRef = 38955E77168F850F000EB8DA /* DropboxSDK.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				38DD8FC7167D289900F59669 /* SimpleSyncTool */,
@@ -595,30 +301,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		38955E83168F850F000EB8DA /* DropboxSDK.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = DropboxSDK.framework;
-			remoteRef = 38955E82168F850F000EB8DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		38955E85168F850F000EB8DA /* libSDropboxSDK.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libSDropboxSDK.a;
-			remoteRef = 38955E84168F850F000EB8DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		38955E87168F850F000EB8DA /* DropboxOSX.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = DropboxOSX.framework;
-			remoteRef = 38955E86168F850F000EB8DA /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		38DD8FC6167D289900F59669 /* Resources */ = {
@@ -629,6 +311,7 @@
 				38DD8FDD167D289A00F59669 /* Credits.rtf in Resources */,
 				38DD8FE3167D289A00F59669 /* MainMenu.xib in Resources */,
 				38955C05168F82A4000EB8DA /* ConnectionSettings.plist in Resources */,
+				38E9D39B16932B040069986A /* DropboxAPI in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

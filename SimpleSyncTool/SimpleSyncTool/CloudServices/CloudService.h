@@ -10,6 +10,10 @@
 
 @protocol CloudServiceDelegate <NSObject>
 
+// Delegate gets called when client did authenticate.
+- (void)didAutheticate;
+- (void)errorOccurredWhileAuthentication:(NSError *)error;
+
 // Delegate gets called when content is ready. Array contains dictionaries with fileinformation
 - (void)didLoadContent:(NSArray *)content ofPath:(NSString *)path;
 - (void)errorOccurred:(NSError *)error whileLoadingContentOfPath:(NSString *)path;
@@ -25,6 +29,10 @@
 
 @protocol CloudService <NSObject>
 
+// This needs to be called before you use the api. If the client did not authenticate
+// properly all following actions will fail. (Async)
+- (void)authenticate;
+
 // Load content of a specific path in the cloud (Async)
 - (void)loadContentOfCloudPath:(NSString *)path;
 // Upload a file from the local file system into the cloud (Async)
@@ -36,3 +44,23 @@
 @property (nonatomic, weak) id<CloudServiceDelegate> delegate;
 
 @end
+
+
+// Content information tags
+// ************************
+//
+// #define SOMESHIT @"blabla"
+
+
+
+// Error Codes
+// ***********
+//
+// 100 - Authetication failed, unable to connect to service
+//
+//
+// add more codes here
+#define CloudServiceAutheticationFailedError 100;
+
+
+
