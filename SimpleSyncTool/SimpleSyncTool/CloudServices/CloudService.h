@@ -11,18 +11,18 @@
 @protocol CloudServiceDelegate <NSObject>
 
 // Delegate gets called when client did authenticate.
-- (void)didAutheticate;
+- (void)didAuthenticate;
 - (void)errorOccurredWhileAuthentication:(NSError *)error;
 
 // Delegate gets called when content is ready. Array contains dictionaries with fileinformation
 - (void)didLoadContent:(NSArray *)content ofPath:(NSString *)path;
-- (void)errorOccurred:(NSError *)error whileLoadingContentOfPath:(NSString *)path;
+- (void)errorOccurredWhileLoadingContent:(NSError *)error;
 // Delegate gets called when a file upload finished
 - (void)didUploadFileFromLocalPath:(NSString *)localPath toCloudPath:(NSString *)cloudPath;
-- (void)errorOccurred:(NSError *)error whileUploadingFileFromLocalPath:(NSString *)localPath toCloudPath:(NSString *)cloudPath;
+- (void)errorOccurredWhileUploadingFile:(NSError *)error;
 // Delegate gets callwhen a file download finished
-- (void)didDownloadFileFromCloudPath:(NSString *)cloudPath toLocalPath:(NSString *)localPath;
-- (void)errorOccurred:(NSError *)error whileDownloadingFileFromCloudPath:(NSString *)cloudPath toLocalPath:(NSString *)localPath;
+- (void)didDownloadFileToLocalPath:(NSString *)localPath;
+- (void)errorOccurredWhileDownloadingFile:(NSError *)error;
 
 @end
 
@@ -49,7 +49,11 @@
 // Content information tags
 // ************************
 //
-// #define SOMESHIT @"blabla"
+#define CloudServiceContentName @"Name"
+#define CloudServiceContentLastModifiedDate @"LastModifiedDate"
+#define CloudServiceContentIsDirectory @"IsDirectory"
+#define CloudServiceContentPath @"Path"
+#define CloudServiceContentSize @"Size"
 
 
 
@@ -60,7 +64,13 @@
 //
 //
 // add more codes here
-#define CloudServiceAutheticationFailedError 100;
+#define CloudServiceErrorDomain @"CloudService"
+
+#define CloudServiceNotAutheticatedError 100
+#define CloudServiceAutheticationFailedError 110
+#define CloudServiceLoadContentFailedError 210
+#define CloudServiceDownloadFileFailedError 220
+#define CloudServiceUploadFileFailedError 230
 
 
 

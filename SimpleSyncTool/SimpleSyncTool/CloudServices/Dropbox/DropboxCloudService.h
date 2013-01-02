@@ -11,6 +11,9 @@
 
 @interface DropboxCloudService : NSObject <CloudService>
 
++ (id)cloudServiceWithAppKey:(NSString *)appKey andAppSecret:(NSString *)appSecret;
+- (id)initWithAppKey:(NSString *)appKey andAppSecret:(NSString *)appSecret;
+
 @property (nonatomic, weak) id<CloudServiceDelegate> delegate;
 
 @end
