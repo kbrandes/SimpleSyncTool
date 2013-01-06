@@ -11,7 +11,9 @@
 		191D3B311689B815002C69DB /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 191D3B301689B815002C69DB /* SystemConfiguration.framework */; };
 		19283B3A1688B79500AA4AD4 /* GTL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19283B321688B78E00AA4AD4 /* GTL.framework */; };
 		19283B3B1688B7A300AA4AD4 /* GTL.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 19283B321688B78E00AA4AD4 /* GTL.framework */; };
-		19283B3D1688B7B800AA4AD4 /* GTLDrive_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = 19283B3C1688B7B800AA4AD4 /* GTLDrive_Sources.m */; };
+		1955C6101699C75D002988A5 /* GoogleDriveCloudService.m in Sources */ = {isa = PBXBuildFile; fileRef = 1955C60F1699C75D002988A5 /* GoogleDriveCloudService.m */; };
+		1979B2921694A7F200353D49 /* GTLDrive_Sources.m in Sources */ = {isa = PBXBuildFile; fileRef = 1979B2911694A7F200353D49 /* GTLDrive_Sources.m */; };
+		19EBD097168BA58F00155E31 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19EBD096168BA58F00155E31 /* WebKit.framework */; };
 		38DD8FCD167D289A00F59669 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD8FCC167D289A00F59669 /* Cocoa.framework */; };
 		38DD8FD7167D289A00F59669 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38DD8FD5167D289A00F59669 /* InfoPlist.strings */; };
 		38DD8FD9167D289A00F59669 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DD8FD8167D289A00F59669 /* main.m */; };
@@ -79,7 +81,11 @@
 		191D3B2E1689B809002C69DB /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		191D3B301689B815002C69DB /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		19283B261688B78E00AA4AD4 /* GTL.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GTL.xcodeproj; path = "../../../google-api-objectivec-client-read-only/Source/GTL.xcodeproj"; sourceTree = "<group>"; };
-		19283B3C1688B7B800AA4AD4 /* GTLDrive_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLDrive_Sources.m; path = "../../../../google-api-objectivec-client-read-only/Source/Services/Drive/Generated/GTLDrive_Sources.m"; sourceTree = "<group>"; };
+		1955C60E1699C75D002988A5 /* GoogleDriveCloudService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoogleDriveCloudService.h; sourceTree = "<group>"; };
+		1955C60F1699C75D002988A5 /* GoogleDriveCloudService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoogleDriveCloudService.m; sourceTree = "<group>"; };
+		1955C6111699C788002988A5 /* CloudService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CloudService.h; sourceTree = "<group>"; };
+		1979B2911694A7F200353D49 /* GTLDrive_Sources.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTLDrive_Sources.m; path = "../../../google-api-objectivec-client-read-only/Source/Services/Drive/Generated/GTLDrive_Sources.m"; sourceTree = "<group>"; };
+		19EBD096168BA58F00155E31 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		38DD8FC8167D289900F59669 /* SimpleSyncTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleSyncTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38DD8FCC167D289A00F59669 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		38DD8FCF167D289A00F59669 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -106,6 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19EBD097168BA58F00155E31 /* WebKit.framework in Frameworks */,
 				191D3B311689B815002C69DB /* SystemConfiguration.framework in Frameworks */,
 				191D3B2F1689B809002C69DB /* Security.framework in Frameworks */,
 				19283B3A1688B79500AA4AD4 /* GTL.framework in Frameworks */,
@@ -139,6 +146,7 @@
 		38DD8FBD167D289900F59669 = {
 			isa = PBXGroup;
 			children = (
+				19EBD096168BA58F00155E31 /* WebKit.framework */,
 				38DD8FD2167D289A00F59669 /* SimpleSyncTool */,
 				38DD8FEF167D289A00F59669 /* SimpleSyncToolTests */,
 				38DD8FCB167D289900F59669 /* Frameworks */,
@@ -158,6 +166,7 @@
 		38DD8FCB167D289900F59669 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1979B2911694A7F200353D49 /* GTLDrive_Sources.m */,
 				191D3B301689B815002C69DB /* SystemConfiguration.framework */,
 				191D3B2E1689B809002C69DB /* Security.framework */,
 				19283B261688B78E00AA4AD4 /* GTL.xcodeproj */,
@@ -181,10 +190,12 @@
 		38DD8FD2167D289A00F59669 /* SimpleSyncTool */ = {
 			isa = PBXGroup;
 			children = (
-				19283B3C1688B7B800AA4AD4 /* GTLDrive_Sources.m */,
 				38DD8FDE167D289A00F59669 /* AppDelegate.h */,
 				38DD8FDF167D289A00F59669 /* AppDelegate.m */,
 				38DD8FE1167D289A00F59669 /* MainMenu.xib */,
+				1955C60E1699C75D002988A5 /* GoogleDriveCloudService.h */,
+				1955C60F1699C75D002988A5 /* GoogleDriveCloudService.m */,
+				1955C6111699C788002988A5 /* CloudService.h */,
 				38DD8FD3167D289A00F59669 /* Supporting Files */,
 			);
 			path = SimpleSyncTool;
@@ -382,8 +393,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				38DD8FD9167D289A00F59669 /* main.m in Sources */,
-				19283B3D1688B7B800AA4AD4 /* GTLDrive_Sources.m in Sources */,
 				38DD8FE0167D289A00F59669 /* AppDelegate.m in Sources */,
+				1979B2921694A7F200353D49 /* GTLDrive_Sources.m in Sources */,
+				1955C6101699C75D002988A5 /* GoogleDriveCloudService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

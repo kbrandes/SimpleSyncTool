@@ -2,51 +2,57 @@
 //  AppDelegate.m
 //  SimpleSyncTool
 //
-//  Created by Kevin Brandes on 12/15/12.
-//  Copyright (c) 2012 Kevin Brandes. All rights reserved.
+//  Created by Fabian Introvigne on 12/15/12.
+//  Copyright (c) 2012 Fabian Introvigne. All rights reserved.
 //
 
 #import "AppDelegate.h"
-#import "GTL/GTLUtilities.h"
-#import "GTL/GTMHTTPFetcherLogging.h"
-
-static NSString *const kKeychainItemName = @"Google Drive Quickstart";
-static NSString *const kClientID = @"649976549881.apps.googleusercontent.com";
-static NSString *const kClientSecret = @"6cwhrofN_qjgSvTQ2ATgYBLf";
+#import "GoogleDriveCloudService.h"
 
 @interface AppDelegate ()
-@property (nonatomic, readonly) GTLServiceDrive *driveService;
+@property (nonatomic, strong) GoogleDriveCloudService *googleDriveService;
 @end
 
 @implementation AppDelegate
 
-- (IBAction)signInClicked:(NSButton *)sender {
-}
-
-- (NSString *)signedInUsername {
-    // Get the email address of the signed-in user.
-    GTMOAuth2Authentication *auth = self.driveService.authorizer;
-    BOOL isSignedIn = auth.canAuthorize;
-    if (isSignedIn) {
-        return auth.userEmail;
-    } else {
-        return nil;
-    }
-}
-
-- (BOOL)isSignedIn {
-    NSString *name = [self signedInUsername];
-    return (name != nil);
-}
-
-
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification
+- (void)applicationDidFinishLaunching:(NSNotification *)notification
 {
-    // Insert code here to initialize your application
+    self.googleDriveService = [[GoogleDriveCloudService alloc] initWithGoogleDriveCloudService:self.window];
+}
+- (IBAction)signInClicked:(NSButton *)sender
+{
+    [self.googleDriveService authenticate];
+}
+- (IBAction)getFileListClicked:(NSButton *)sender
+{
+    [self.googleDriveService loadContentOfCloudPath:@"./"];
+}
+- (IBAction)detailsClicked:(NSButton *)sender
+{
+    
+}
+- (IBAction)uploadClicked:(NSButton *)sender
+{
+    // Ask the user to choose a file.
+    NSOpenPanel *openPanel = [NSOpenPanel openPanel];
+    [openPanel setPrompt:@"Upload"];
+    [openPanel setCanChooseDirectories:NO];
+    [openPanel beginSheetModalForWindow:[self window]
+                      completionHandler:^(NSInteger result) {
+                          // Callback.
+                          if (result == NSOKButton) {
+                              // The user chose a file and clicked OK.
+                              //
+                              // Start uploading (deferred briefly since
+                              // we currently have a sheet displayed).
+                              NSString *path = [[openPanel URL] path];
+                              [self.googleDriveService uploadFileFromLocalPath:path toCloudPath:nil];
+                              /*[self performSelector:@selector(uploadFileAtPath:)
+                                         withObject:path
+                                         afterDelay:0.1];*/
+                          }
+                      }];
 }
 
-- (BOOL)applicationShouldTerminateAfterLastWindowClosed:(NSApplication *)sender {
-    return YES;
-}
 
 @end
