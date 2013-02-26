@@ -12,6 +12,7 @@
 @interface AppDelegate () <CloudServiceDelegate>
 
 @property (nonatomic, strong) id<CloudService> service;
+@property (nonatomic, strong) NSStatusItem *statusItem;
 
 @end
 
@@ -19,13 +20,19 @@
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification
 {
+    self.statusItem = [[NSStatusBar systemStatusBar] statusItemWithLength:NSVariableStatusItemLength];
+    [self.statusItem setMenu:self.barMenu];
+    [self.statusItem setTitle:@"SST"];
+    [self.statusItem setHighlightMode:YES];
+    
+    // Cloud service
     NSString *path = [[NSBundle mainBundle] pathForResource:@"ConnectionSettings" ofType:@"plist"];
     NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
     NSString *appKey = [dict objectForKey:@"DropboxAppKey"];
     NSString *appSecret = [dict objectForKey:@"DropboxAppSecret"];
     self.service = [DropboxCloudService cloudServiceWithAppKey:appKey andAppSecret:appSecret];
-    self.service.delegate = self;
-    [self.service authenticate];
+    //self.service.delegate = self;
+    //[self.service authenticate];
 }
 
 
@@ -36,7 +43,7 @@
     NSLog(@"Did authenticate");
     //[self.service uploadFileFromLocalPath:@"/Users/kevinbrandes/Desktop/Phit.pdf" toCloudPath:@"/TestFolder/"];
     //[self.service downloadFileFromCloudPath:@"/TestFolder/Phit.pdf" toLocalPath:@"/Users/kevinbrandes/Desktop/Phit.pdf"];
-    [self.service loadContentOfCloudPath:@"/TestFolder/"];
+    //[self.service loadContentOfCloudPath:@"/TestFolder/"];
 }
 
 - (void)errorOccurredWhileAuthentication:(NSError *)error
@@ -75,6 +82,11 @@
 - (void)errorOccurredWhileDownloadingFile:(NSError *)error
 {
     NSLog(@"Error while downloading file: %@", error);
+}
+
+- (IBAction)statusBarMenuItemClicked:(NSMenuItem *)sender
+{
+    NSLog(@"Item clicked: %@", sender.title);
 }
 
 

@@ -59,15 +59,30 @@
         if (![[DBSession sharedSession] isLinked])
             [[DBAuthHelperOSX sharedHelper] authenticate];
         else
-            [self.delegate didAuthenticate];
+            if ([self.delegate respondsToSelector:@selector(didAuthenticate)])
+                [self.delegate didAuthenticate];
     } else {
         NSMutableDictionary *errorDetail = [NSMutableDictionary dictionary];
         [errorDetail setValue:@"Authetication failed, invalid App Key and App Secret." forKey:NSLocalizedDescriptionKey];
         NSError *error = [NSError errorWithDomain:CloudServiceErrorDomain code:CloudServiceAutheticationFailedError userInfo:errorDetail];
-        [self.delegate errorOccurredWhileAuthentication:error];
+        if ([self.delegate respondsToSelector:@selector(errorOccurredWhileAuthentication:)])
+            [self.delegate errorOccurredWhileAuthentication:error];
     }
 }
 
+- (void)loadAttributesOfCloudPath:(NSString *)path
+{
+    // check if client is connected to service (authentication occurred)
+    if (self.client) {
+        [self.client loadMetadata:path];
+    } else {
+        NSError *error = [self createDefaultErrorWithMessage:@"Client is not authenticated." andErrorCode:CloudServiceNotAutheticatedError];
+        if ([self.delegate respondsToSelector:@selector(errorOccurredWhileLoadingAttributes::)])
+            [self.delegate errorOccurredWhileLoadingAttributes:error];
+    }
+}
+
+/*
 - (void)loadContentOfCloudPath:(NSString *)path
 {
     // check if client is connected to service (authentication occurred)
@@ -75,9 +90,11 @@
         [self.client loadMetadata:path];
     } else {
         NSError *error = [self createDefaultErrorWithMessage:@"Client is not authenticated." andErrorCode:CloudServiceNotAutheticatedError];
-        [self.delegate errorOccurredWhileLoadingContent:error];
+        if ([self.delegate respondsToSelector:@selector(errorOccurredWhileLoadingContent:)])
+            [self.delegate errorOccurredWhileLoadingContent:error];
     }
 }
+ */
 
 - (void)uploadFileFromLocalPath:(NSString *)localPath toCloudPath:(NSString *)cloudPath
 {
@@ -87,7 +104,8 @@
         [self.client uploadFile:filename toPath:cloudPath withParentRev:nil fromPath:localPath];
     } else {
         NSError *error = [self createDefaultErrorWithMessage:@"Client is not authenticated." andErrorCode:CloudServiceNotAutheticatedError];
-        [self.delegate errorOccurredWhileUploadingFile:error];
+        if ([self.delegate respondsToSelector:@selector(errorOccurredWhileUploadingFile:)])
+            [self.delegate errorOccurredWhileUploadingFile:error];
     }
 }
 
@@ -98,7 +116,8 @@
         [self.client loadFile:cloudPath intoPath:localPath];
     } else {
         NSError *error = [self createDefaultErrorWithMessage:@"Client is not authenticated." andErrorCode:CloudServiceNotAutheticatedError];
-        [self.delegate errorOccurredWhileDownloadingFile:error];
+        if ([self.delegate respondsToSelector:@selector(errorOccurredWhileDownloadingFile:)])
+            [self.delegate errorOccurredWhileDownloadingFile:error];
     }
 }
 
@@ -106,6 +125,20 @@
 
 - (void)restClient:(DBRestClient*)client loadedMetadata:(DBMetadata*)metadata
 {
+    NSMutableDictionary *attributes = [[NSMutableDictionary alloc]init];
+    [attributes setObject:metadata.filename forKey:CloudServiceFileAttributeName];
+    [attributes setObject:metadata.path forKey:CloudServiceFileAttributePath];
+    [attributes setObject:metadata.lastModifiedDate forKey:CloudServiceFileAttributeLastModifiedDate];
+    [attributes setObject:[NSNumber numberWithLong:metadata.totalBytes] forKey:CloudServiceFileAttributeSize];
+    [attributes setObject:[NSNumber numberWithBool:metadata.isDirectory] forKey:CloudServiceFileAttributeIsDirectory];
+    NSMutableArray *content = [[NSMutableArray alloc]initWithCapacity:[metadata.contents count]];
+    for (DBMetadata *contentMetadata in metadata.contents) {
+        [content addObject:contentMetadata.path];
+    }
+    [attributes setObject:content forKey:CloudServiceFileAttributeContent];
+    if ([self.delegate respondsToSelector:@selector(didLoadAttributes:ofPath:)])
+        [self.delegate didLoadAttributes:attributes ofPath:metadata.path];
+    /*
     // convert metadata into array of dictionaries
     NSMutableArray *content = [[NSMutableArray alloc] init];
     for (DBMetadata *contentMetadata in metadata.contents) {
@@ -119,37 +152,43 @@
         NSDictionary *contentInformation = [NSDictionary dictionaryWithObjects:contentValues forKeys:contentKeys];
         [content addObject:contentInformation];
     }
-    [self.delegate didLoadContent:content ofPath:metadata.path];
+    if ([self.delegate respondsToSelector:@selector(didLoadContent:ofPath:)])
+        [self.delegate didLoadContent:content ofPath:metadata.path];
+     */
 }
 
 - (void)restClient:(DBRestClient *)client loadMetadataFailedWithError:(NSError *)error
 {
     NSError *cloudServiceError = [self createDefaultErrorWithMessage:error.localizedDescription andErrorCode:CloudServiceLoadContentFailedError];
-    [self.delegate errorOccurredWhileLoadingContent:cloudServiceError];
+    if ([self.delegate respondsToSelector:@selector(errorOccurredWhileLoadingContent:)])
+        [self.delegate errorOccurredWhileLoadingContent:cloudServiceError];
 }
 
 - (void)restClient:(DBRestClient*)client uploadedFile:(NSString*)destPath
               from:(NSString*)srcPath metadata:(DBMetadata*)metadata
 {
-    
-    [self.delegate didUploadFileFromLocalPath:srcPath toCloudPath:destPath];
+    if ([self.delegate respondsToSelector:@selector(didUploadFileFromLocalPath:toCloudPath:)])
+        [self.delegate didUploadFileFromLocalPath:srcPath toCloudPath:destPath];
 }
 
 - (void)restClient:(DBRestClient*)client uploadFileFailedWithError:(NSError*)error
 {
     NSError *cloudError = [self createDefaultErrorWithMessage:error.localizedDescription andErrorCode:CloudServiceUploadFileFailedError];
-    [self.delegate errorOccurredWhileUploadingFile:cloudError];
+    if ([self.delegate respondsToSelector:@selector(errorOccurredWhileUploadingFile:)])
+        [self.delegate errorOccurredWhileUploadingFile:cloudError];
 }
 
 -(void)restClient:(DBRestClient *)client loadedFile:(NSString *)destPath
 {
-    [self.delegate didDownloadFileToLocalPath:destPath];
+    if ([self.delegate respondsToSelector:@selector(didDownloadFileToLocalPath:)])
+        [self.delegate didDownloadFileToLocalPath:destPath];
 }
 
 -(void)restClient:(DBRestClient *)client loadFileFailedWithError:(NSError *)error
 {
     NSError *cloudError = [self createDefaultErrorWithMessage:error.localizedDescription andErrorCode:CloudServiceDownloadFileFailedError];
-    [self.delegate errorOccurredWhileDownloadingFile:cloudError];
+    if ([self.delegate respondsToSelector:@selector(errorOccurredWhileDownloadingFile:)])
+        [self.delegate errorOccurredWhileDownloadingFile:cloudError];
 }
 
 /*
@@ -206,10 +245,12 @@
 - (void)authHelperStateChangedNotification:(NSNotification *)notification
 {
     if ([[DBSession sharedSession] isLinked]) {
-        [self.delegate didAuthenticate];
+        if ([self.delegate respondsToSelector:@selector(didAuthenticate)])
+            [self.delegate didAuthenticate];
     } else {
         NSError *error = [self createDefaultErrorWithMessage:@"Authetication failed, unable to connect to service." andErrorCode:CloudServiceAutheticationFailedError];
-        [self.delegate errorOccurredWhileAuthentication:error];
+        if ([self.delegate respondsToSelector:@selector(errorOccurredWhileAuthentication:)])
+            [self.delegate errorOccurredWhileAuthentication:error];
     }
 }
 

@@ -10,10 +10,14 @@
 
 @protocol CloudServiceDelegate <NSObject>
 
+@optional
 // Delegate gets called when client did authenticate.
 - (void)didAuthenticate;
 - (void)errorOccurredWhileAuthentication:(NSError *)error;
 
+// Delegate gets called when file attributes are ready. Dictionary contains fileinformation
+- (void)didLoadAttributes:(NSDictionary *)attributes ofPath:(NSString *)path;
+- (void)errorOccurredWhileLoadingAttributes:(NSError *)error;
 // Delegate gets called when content is ready. Array contains dictionaries with fileinformation
 - (void)didLoadContent:(NSArray *)content ofPath:(NSString *)path;
 - (void)errorOccurredWhileLoadingContent:(NSError *)error;
@@ -33,8 +37,10 @@
 // properly all following actions will fail. (Async)
 - (void)authenticate;
 
+// Load File attributes of a specific path in the cloud (Async)
+- (void)loadAttributesOfCloudPath:(NSString *)path;
 // Load content of a specific path in the cloud (Async)
-- (void)loadContentOfCloudPath:(NSString *)path;
+//- (void)loadContentOfCloudPath:(NSString *)path;
 // Upload a file from the local file system into the cloud (Async)
 - (void)uploadFileFromLocalPath:(NSString *)localPath toCloudPath:(NSString *)cloudPath;
 // Download a file from the cloud into the local file system (Async)
@@ -54,6 +60,13 @@
 #define CloudServiceContentIsDirectory @"IsDirectory"
 #define CloudServiceContentPath @"Path"
 #define CloudServiceContentSize @"Size"
+
+#define CloudServiceFileAttributeName @"Name"
+#define CloudServiceFileAttributeLastModifiedDate @"LastModifiedDate"
+#define CloudServiceFileAttributeIsDirectory @"IsDirectory"
+#define CloudServiceFileAttributePath @"Path"
+#define CloudServiceFileAttributeSize @"Size"
+#define CloudServiceFileAttributeContent @"Content"
 
 
 
