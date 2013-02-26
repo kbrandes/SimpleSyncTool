@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38241171168CDF4900D0DF0E /* Dropbox in Resources */ = {isa = PBXBuildFile; fileRef = 38241170168CDF4900D0DF0E /* Dropbox */; };
+		38241177168CDF7F00D0DF0E /* DropboxOSX.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38241176168CDF7F00D0DF0E /* DropboxOSX.framework */; };
 		38743D6E168B8B53005379B2 /* GoogleDriveCloudService.m in Sources */ = {isa = PBXBuildFile; fileRef = 38743D6D168B8B53005379B2 /* GoogleDriveCloudService.m */; };
 		38743D71168B8BBF005379B2 /* DropboxCloudService.m in Sources */ = {isa = PBXBuildFile; fileRef = 38743D70168B8BBF005379B2 /* DropboxCloudService.m */; };
 		38DD8FCD167D289A00F59669 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD8FCC167D289A00F59669 /* Cocoa.framework */; };
@@ -19,7 +21,6 @@
 		38DD8FEC167D289A00F59669 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38DD8FCC167D289A00F59669 /* Cocoa.framework */; };
 		38DD8FF4167D289A00F59669 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 38DD8FF2167D289A00F59669 /* InfoPlist.strings */; };
 		38DD8FF7167D289A00F59669 /* SimpleSyncToolTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DD8FF6167D289A00F59669 /* SimpleSyncToolTests.m */; };
-		38DD9005167D296200F59669 /* DropboxOSX.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 38DD9004167D296200F59669 /* DropboxOSX.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,13 +40,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				38DD9005167D296200F59669 /* DropboxOSX.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		38241170168CDF4900D0DF0E /* Dropbox */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Dropbox; sourceTree = "<group>"; };
+		38241176168CDF7F00D0DF0E /* DropboxOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = file; name = DropboxOSX.framework; path = Dropbox/DropboxSDK/build/Release/DropboxOSX.framework; sourceTree = "<group>"; };
 		38743D6B168B8A10005379B2 /* CloudService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CloudService.h; path = CloudServices/CloudService.h; sourceTree = "<group>"; };
 		38743D6C168B8B53005379B2 /* GoogleDriveCloudService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GoogleDriveCloudService.h; path = "CloudServices/Google Drive/GoogleDriveCloudService.h"; sourceTree = "<group>"; };
 		38743D6D168B8B53005379B2 /* GoogleDriveCloudService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GoogleDriveCloudService.m; path = "CloudServices/Google Drive/GoogleDriveCloudService.m"; sourceTree = "<group>"; };
@@ -70,7 +72,6 @@
 		38DD8FF3167D289A00F59669 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		38DD8FF5167D289A00F59669 /* SimpleSyncToolTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleSyncToolTests.h; sourceTree = "<group>"; };
 		38DD8FF6167D289A00F59669 /* SimpleSyncToolTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleSyncToolTests.m; sourceTree = "<group>"; };
-		38DD9004167D296200F59669 /* DropboxOSX.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = DropboxOSX.framework; path = ../../../Frameworks/Dropbox/DropboxOSX.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38241177168CDF7F00D0DF0E /* DropboxOSX.framework in Frameworks */,
 				38DD8FCD167D289A00F59669 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -168,7 +170,8 @@
 		38DD8FCB167D289900F59669 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				38DD9004167D296200F59669 /* DropboxOSX.framework */,
+				38241176168CDF7F00D0DF0E /* DropboxOSX.framework */,
+				38241170168CDF4900D0DF0E /* Dropbox */,
 				38DD8FCC167D289A00F59669 /* Cocoa.framework */,
 				38DD8FEA167D289A00F59669 /* SenTestingKit.framework */,
 				38DD8FCE167D289A00F59669 /* Other Frameworks */,
@@ -304,6 +307,7 @@
 				38DD8FD7167D289A00F59669 /* InfoPlist.strings in Resources */,
 				38DD8FDD167D289A00F59669 /* Credits.rtf in Resources */,
 				38DD8FE3167D289A00F59669 /* MainMenu.xib in Resources */,
+				38241171168CDF4900D0DF0E /* Dropbox in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
